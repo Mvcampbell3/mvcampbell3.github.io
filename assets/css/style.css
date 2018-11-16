@@ -9,10 +9,10 @@ ul{
 
 body{
     height: 100vh;
-    background-image: url(../images/blue-lake-water-7324.jpg);
+    
+    background: url(../images/blue-lake-water-7324.jpg), rgb(3, 3, 25);
     background-size: cover;
     background-repeat: no-repeat;
-    background-repeat: repeat-y;
 }
 
 header{
