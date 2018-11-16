@@ -1,5 +1,140 @@
-body{
+body, h1, h2, h3, h4, p, ul{
     margin: 0;
     padding: 0;
-    background-color: deepskyblue;
+}
+
+ul{
+    list-style: none;
+}
+
+body{
+    height: 100vh;
+    background-image: url(../images/blue-lake-water-7324.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-repeat: repeat-y;
+}
+
+header{
+    width: 100vw;
+    /* height: 80px; */
+    /* background-color: green; */
+}
+
+.head-wrap{
+     width: 70%;
+     margin: 0 auto;
+     height: 80px;
+     display: flex;
+     justify-content: space-between;
+     align-items: flex-end;
+     padding: 0 20px;
+}
+
+nav{
+    text-align: center;
+}
+
+nav ul{
+    display: flex;
+}
+
+nav li{
+    padding: 0 10px;
+    transition: all, .26s
+
+}
+
+nav li:nth-child(2){
+    border-left: 1px white solid;
+    border-right: 1px white solid;
+    padding: 0 10px;
+}
+
+nav a{
+    color: white;
+    text-decoration: none;
+    font-size: 25px;
+}
+
+nav li:hover{
+    background-color: black;
+    color: white;
+    transition: all, .51s;
+}
+
+.line{
+    height: 3px;
+    width: 100%;
+    background: linear-gradient(90deg, black, navy, white);
+    width: 73%;
+    margin: auto;
+}
+
+.name{
+    font-size: 50px;
+    padding-top: 40px;
+    font-family: 'Libre Franklin', sans-serif;
+    line-height: .8;
+}
+
+@media (max-width: 1000px) {
+    .name{
+        font-size: 39px;
+    }
+}
+
+@media (max-width: 640px) {
+    .head-wrap{
+        width: 300px;
+        display: block;
+        margin: 0 auto;
+        height: fit-content;
+        overflow: hidden;
+    }
+
+    .line{
+        width: 300px;
+        margin: auto;
+    }
+
+    .name{
+        text-align: center;
+        margin-bottom: 1em;
+        font-size: 50px;
+        color: black;
+    }
+
+    nav a{
+        color: navy;
+    }
+
+}
+
+
+
+/* ---------------------Container------------------------- */
+
+.container{
+    width: 70%;
+    margin: 3em auto 0 auto;
+    border: 3px grey solid;
+    background-color: #eee;
+}
+
+.inside-con{
+    padding: 20px 40px;
+    border: 3px black solid;
+}
+
+.top-con{
+    text-align: center;
+    font-size: 40px;
+    border-bottom: 3px grey solid;
+}
+
+.content-con{
+    font-size: 20px;
+    text-indent: 20px;
+    line-height: 1.5;
 }
