@@ -7,25 +7,12 @@ ul{
     list-style: none;
 }
 
-/* body{
-    height: 100vh;
-    font-family: 'Staatliches', cursive; 
-    background: url(../images/abstract-astro-astronomy-956999.jpg), rgb(3, 3, 25);
-    background-size: cover;
-    background-repeat: no-repeat;
-} */
 
 body{
     height: 100%;
     width: 100%;
     overflow-x: hidden;
     background-color: navy;
-    /* position: absolute;
-    z-index: -1;
-    background: url(../images/abstract-astro-astronomy-956999.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed; */
 }
 
 .bg{
@@ -43,8 +30,6 @@ body{
 
 header{
     width: 100vw;
-    /* height: 80px; */
-    /* background-color: green; */
 }
 
 .head-wrap{
@@ -99,12 +84,6 @@ nav a{
     color: white;
 }
 
-
-
-
-
-
-
 /* ---------------------Container------------------------- */
 
 .container{
@@ -112,41 +91,49 @@ nav a{
     border-radius: 20px;
     border: 7px white solid;
     position: relative;
-    top: -1500px;
     padding: 20px;
     min-width: 320px;
     max-width: 70%;
     margin: 2em auto;
     font-size: 25px;
     color: black;
-    animation-name: slide;
-    animation-duration: 3s;
-    animation-delay: 2s;
-    animation-fill-mode: forwards;
 }
 
-@keyframes slide{
-    0%{top: -1500px}
-    100%{top: 0px}
+#about{
+    display: none;
+    opacity: 0;
 }
 
 .container h2{
     text-align: center;
 }
 
-/* .triangle{
-    height: 300px;
-    width: 300px;
-    margin: auto;
-    -webkit-clip-path: polygon(100% 100%, 64% 100%, 63% 45%, 50% 65%, 31% 45%, 30% 100%, 0 100%, 0 0);
-    clip-path: polygon(100% 100%, 64% 100%, 63% 45%, 50% 65%, 31% 45%, 30% 100%, 0 100%, 0 0);
-    background-color: deepskyblue;
-} */
-
 .padding-bottom{
     padding-bottom: 400px;
 }
+/* -------------------------Contact Form------------------------------ */
 
+.input{
+    width: 90%;
+    padding: 5px 0;
+    font-size: 20px;
+}
+
+textarea{
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    width: 90.25%;
+    font-size: 20px;
+}
+
+#contactForm{
+    display: none;
+}
+
+#message{
+    padding: 5px;
+}
 /* -------------------------Media Queries----------------------------- */
 
 @media (max-width: 1000px) {

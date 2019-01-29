@@ -9,7 +9,7 @@
     <link href="https://fonts.googleapis.com/css?family=Libre+Franklin|Shrikhand|Trirong" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Staatliches" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
-    <title>MCampbell</title>
+    <title>M Campbell</title>
 </head>
 
 <body>
@@ -20,9 +20,9 @@
             <h1 class="name">Michael Campbell</h1>
             <nav>
                 <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Projects</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="#" data-show="true" data-which="about" id="home">Home</a></li>
+                    <li><a href="#" data-show="false" data-which="projectPage" id="projects">Projects</a></li>
+                    <li><a href="#" data-show="false" data-which="contactForm" id="contact">Contact</a></li>
                 </ul>
             </nav>
 
@@ -31,7 +31,7 @@
 
     <div class="line"></div>
 
-    <div class="container">
+    <div id ="about" class="container">
         <div class="section">
             <div class="top">
                 <h2>About Me:</h2>
@@ -45,6 +45,18 @@
                 </p>
             </div>
         </div>
+    </div>
+
+    <div id="contactForm" class="container">
+        <form action="submit" class="form">
+            <label for="name">Enter Name</label><br>
+            <input type="text" name="name" id="name" class="input"><br>
+            <label for="email">Enter Email</label><br>
+            <input type="email" name="email" id="email" class="input"><br>
+            <label for="message"></label><br>
+            <textarea name="message" id="message" cols="30" rows="5"></textarea><br>
+            <button type="submit" class="btn" id="subBtn">Submit</button>
+        </form>
     </div>
 
     <div class="triangle"></div>
