@@ -1,169 +1,177 @@
-body, h1, h2, h3, h4, p, ul{
+body, html{
     margin: 0;
     padding: 0;
+    min-height: 100vh;
+    overflow: auto;
+    width: 100%;
+    box-sizing: border-box;
 }
-
-ul{
-    list-style: none;
-}
-
 
 body{
-    height: 100%;
-    width: 100%;
-    overflow-x: hidden;
-    background-color: navy;
+    background-image: url(../images/background.jpeg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: black;
+    color: white;
 }
 
-.bg{
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    z-index: -1;
-    background: url(../images/milky-way-starry-sky-night-sky-star-956981.jpeg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    -webkit-clip-path: polygon(100% 100%, 64% 100%, 63% 45%, 50% 65%, 31% 45%, 30% 100%, 0 100%, 0 0);
-    clip-path: polygon(100% 100%, 64% 100%, 63% 45%, 50% 65%, 31% 45%, 30% 100%, 0 100%, 0 0);
+h1, h2, h3, h4, h5, h5, p, ul, li, a{
+    padding: 0;
+    margin: 0;
 }
 
 header{
-    width: 100vw;
+    width: 100%;
+    background-color: rgba(20, 20, 20, .90);
+    padding: 20px 0;
 }
 
 .head-wrap{
-     width: 70%;
-     margin: 0 auto;
-     height: 80px;
-     display: flex;
-     justify-content: space-between;
-     align-items: flex-end;
-     padding: 0 20px;
-}
-
-nav{
-    text-align: center;
+    display: flex;
+    width: 80%;
+    margin: auto;
+    justify-content: space-evenly;
+    
 }
 
 nav ul{
     display: flex;
-}
-
-nav li{
-    padding: 0 10px;
-    transition: all, .26s
-
-}
-
-nav li:nth-child(2){
-    border-left: 1px white solid;
-    border-right: 1px white solid;
-    padding: 0 10px;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 300px;
+    height: 100%;
+    list-style: none;
 }
 
 nav a{
     color: white;
     text-decoration: none;
-    font-size: 25px;
+    font-size: 20px;
 }
-
-.line{
-    height: 3px;
-    width: 100%;
-    background: linear-gradient(90deg, white, navy, black, navy, white);
-    width: 73%;
-    margin: auto;
-}
-
-.name{
-    font-size: 50px;
-    padding-top: 40px;
-    font-family: 'Staatliches', cursive;
-    line-height: .8;
-    color: white;
-}
-
-/* ---------------------Container------------------------- */
 
 .container{
-    background-color: rgba(255, 255, 255, .9);
-    border-radius: 20px;
-    border: 7px white solid;
-    position: relative;
-    padding: 20px;
-    min-width: 320px;
-    max-width: 70%;
-    margin: 2em auto;
+    width: 60%;
+    padding: 30px;
+    background-color: rgba(20, 20, 20, .90);
+    margin: 3em auto;
+    border-radius: 30px
+}
+
+.section .top{
+    text-align: center;
+    font-size: 30px;
+}
+
+.section p{
     font-size: 25px;
-    color: black;
+    text-indent: 40px;
 }
 
-#about{
+#projectPage{
+    margin-top: 1em;
     display: none;
-    opacity: 0;
+    height: 100%;
+    background-color: rgba(20, 20, 20, .90)
 }
 
-.container h2{
+.projectBox{
+    width: 200px;
+}
+
+.projectTitle{
+    width: 100%;
     text-align: center;
 }
 
-.padding-bottom{
-    padding-bottom: 400px;
-}
-/* -------------------------Contact Form------------------------------ */
-
-.input{
-    width: 90%;
-    padding: 5px 0;
-    font-size: 20px;
+.projectPic{
+    width: 200px;
+    height: 133.13px;
+    cursor: pointer;
 }
 
-textarea{
-    box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    width: 90.25%;
-    font-size: 20px;
+.top-project{
+    text-align: center;
+    font-size: 18px;
+}
+
+.main-projects{
+    display: flex;
+    justify-content: space-evenly;
+    padding-bottom: 5px;
+    border-bottom: 5px solid white;
 }
 
 #contactForm{
     display: none;
 }
 
-#message{
+#displayPic{
+    width: 400px;
+    height: 266.25px;
+    border: 1px white solid;
+}
+
+.project-display{
+    display: flex;
+    width: 80%;
+    margin: auto;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 10px;
+}
+
+#projectName{
+    text-align: center;
+}
+
+.information{
+    padding-left: 10px;
+}
+
+#projectName{
+    font-size: 22px;
+}
+
+#projectContent{
+    padding: 15px;
+    font-size: 18px;
+    text-indent: 20px;
+}
+
+.buttonAreaProject{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.btnA{
+    padding: 8px 16px;
+    font-size: 18px;
+    border-radius: 10px;
+    outline: none;
+    background-color: white;
+    color: black;
+    border: 2px black solid;
+    text-decoration: none;
+}
+
+/* Contact Page */
+
+input[type="text"], input[type="email"]{
+    width: 80%;
     padding: 5px;
-}
-/* -------------------------Media Queries----------------------------- */
-
-@media (max-width: 1000px) {
-    .name{
-        font-size: 39px;
-    }
+    font-size: 18px;
 }
 
-@media (max-width: 640px) {
-    .head-wrap{
-        width: 300px;
-        display: block;
-        margin: 0 auto;
-        height: fit-content;
-        overflow: hidden;
-    }
+textarea{
+    width: 80%;
+    padding: 5px;
+    margin-bottom: 5px;
+}
 
-    .line{
-        width: 300px;
-        margin: auto;
-    }
-
-    .name{
-        text-align: center;
-        margin-bottom: 1em;
-        font-size: 50px;
-        color: white;
-    }
-
-    nav a{
-        color: white;
-    }
+label{
+    display: block;
+    font-size: 20px;
+    padding: 5px 0;
 }
