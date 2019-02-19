@@ -83,6 +83,25 @@ function fadeOut(id) {
     }, 25)
 }
 
+function fadeInFlex() {
+    document.getElementById("projectPage").removeEventListener("click", fadeInFlex);
+    console.log(this.dataset.show);
+    let show = document.getElementById(this.dataset.show);
+    show.style.display = "flex";
+    show.style.opacity = "0";
+    let x = 0;
+    let timer = setInterval(function () {
+        if (x >= 1) {
+            clearInterval(timer);
+            show.style.opacity = 1;
+
+        } else {
+            x = x + 0.05;
+            show.style.opacity = x;
+        }
+    }, 25)
+}
+
 fadeIn(about);
 
 // Project Page
@@ -98,16 +117,16 @@ pictures.forEach(function (picture) {
     picture.addEventListener("click", function () {
         console.log(this.src);
         console.log(this.dataset.info);
-        setDisplay(this.src, this.dataset.info, this.dataset.web)
+        setDisplay(this.dataset.carry, this.dataset.info, this.dataset.web)
     })
 })
 
 const projectInfo = [
-    "This is the classic Rock Paper Scissors Game. This is a multiplay game which utilizes the firebase authentication and database technologies. Simply create a user and join in on the fun.", 
-    "This is an ongoing personal project which has its beginnings back when I just started to learn web design. It started as a simple way to learn arrays and is turning into a fully finished game.", 
-    "This game is a variation of the classic Hangman game with a theme of the movie Princess Bride. This was used as a learning tool for jQuery. I also learned quite a bit about how to add audio to a website. Good luck storming the castle.", 
-    "Here we have a rpg version of the classic fighting game Street Fighter 2. Choose your fighter and try and defeat all comers. There is a path to success for each fighter, Have Fun!", 
-    "Liri is a Node application that will deliever information to the user based on if they want to learn about a movie, song, or upcoming live shows. Follow instruction in the README on the github page to learn more."
+    "This is the classic Rock Paper Scissors Game. This is a multiplay game which utilizes the firebase authentication and database technologies. Simply create a user and join in on the fun.",
+    "This is an ongoing personal project which has its beginnings back when I just started to learn web design. It started as a simple way to learn arrays and is turning into a fully finished game.",
+    "This game is a variation of the classic Hangman game with a theme of the movie Princess Bride. This was used as a learning tool for jQuery. I also learned quite a bit about how to add audio to a website. Good luck storming the castle.",
+    "Here we have a rpg version of the classic fighting game Street Fighter 2. Choose your fighter and try and defeat all comers. There is a path to success for each fighter, Have Fun!",
+    "Liri is a Node application that will deliever information to the user based on if they want to learn about a movie, song, or upcoming live shows. Follow instructions in the README on the github page to learn more."
 ];
 
 const webDestinations = [
@@ -183,3 +202,5 @@ function setDisplay(src, which, web) {
             console.log("setDisplay switch not working")
     }
 }
+
+document.getElementById("projectPage").addEventListener("click", fadeInFlex);

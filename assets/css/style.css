@@ -113,7 +113,7 @@ nav a{
 }
 
 .project-display{
-    display: flex;
+    display: none;
     width: 80%;
     margin: auto;
     justify-content: space-evenly;
