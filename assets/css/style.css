@@ -1,177 +1,35 @@
-body, html{
-    margin: 0;
-    padding: 0;
-    min-height: 100vh;
-    overflow: auto;
-    width: 100%;
+* {
     box-sizing: border-box;
-}
-
-body{
-    background-image: url(../images/background.jpeg);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-color: black;
-    color: white;
-}
-
-h1, h2, h3, h4, h5, h5, p, ul, li, a{
-    padding: 0;
     margin: 0;
+    padding: 0;
 }
 
-header{
-    width: 100%;
-    background-color: rgba(20, 20, 20, .90);
-    padding: 20px 0;
-}
-
-.head-wrap{
-    display: flex;
-    width: 80%;
-    margin: auto;
-    justify-content: space-evenly;
-    
-}
-
-nav ul{
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    width: 300px;
-    height: 100%;
-    list-style: none;
-}
-
-nav a{
-    color: white;
-    text-decoration: none;
-    font-size: 20px;
-}
-
-.container{
-    width: 60%;
-    padding: 30px;
-    background-color: rgba(20, 20, 20, .90);
-    margin: 3em auto;
-    border-radius: 30px
-}
-
-.section .top{
-    text-align: center;
-    font-size: 30px;
-}
-
-.section p{
-    font-size: 25px;
-    text-indent: 40px;
-}
-
-#projectPage{
-    margin-top: 1em;
-    display: none;
-    height: 100%;
-    background-color: rgba(20, 20, 20, .90)
-}
-
-.projectBox{
-    width: 200px;
-}
-
-.projectTitle{
-    width: 100%;
-    text-align: center;
-}
-
-.projectPic{
-    width: 200px;
-    height: 133.13px;
-    cursor: pointer;
-}
-
-.top-project{
-    text-align: center;
-    font-size: 18px;
-}
-
-.main-projects{
-    display: flex;
-    justify-content: space-evenly;
-    padding-bottom: 5px;
-    border-bottom: 5px solid white;
-}
-
-#contactForm{
-    display: none;
-}
-
-#displayPic{
-    width: 400px;
-    height: 266.25px;
-    border: 1px white solid;
-}
-
-.project-display{
-    display: none;
-    width: 80%;
-    margin: auto;
-    justify-content: space-evenly;
-    align-items: center;
-    padding: 10px;
-}
-
-#projectName{
-    text-align: center;
-}
-
-.information{
-    padding-left: 10px;
-}
-
-#projectName{
-    font-size: 22px;
-}
-
-#projectContent{
-    padding: 15px;
-    font-size: 18px;
-    text-indent: 20px;
-}
-
-.buttonAreaProject{
-    width: 100%;
+.container {
+    min-height: 100vh;
     display: flex;
     justify-content: center;
+    align-items: center;
+    transition: background-color .3s;
 }
 
-.btnA{
-    padding: 8px 16px;
-    font-size: 18px;
-    border-radius: 10px;
-    outline: none;
+.wrapper {
+    width: fit-content;
+    padding: 20px;
+    border-radius: 5px;
+    font-family: 'Libre Franklin', sans-serif;
+    text-align: center;
+    box-shadow: 0px 2px 2px 2px rgba(68, 68, 68, 0.274);
+    cursor: pointer;
+    transition: box-shadow .3s;
     background-color: white;
-    color: black;
-    border: 2px black solid;
-    text-decoration: none;
 }
 
-/* Contact Page */
-
-input[type="text"], input[type="email"]{
-    width: 80%;
-    padding: 5px;
-    font-size: 18px;
+.wrapper:hover {
+    box-shadow: 0px 0px 0px 0px rgba(68, 68, 68, 0.274);
+    transition: box-shadow .3s;
 }
 
-textarea{
-    width: 80%;
-    padding: 5px;
-    margin-bottom: 5px;
-}
-
-label{
-    display: block;
-    font-size: 20px;
-    padding: 5px 0;
+.black {
+    background-color: #333;
+    transition: background-color .3s;
 }
